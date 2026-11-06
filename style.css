@@ -30,14 +30,59 @@ body {
         text-align: center;
     }
 
-    section a {
+    #inicio {
+        padding: 60px 30px;
+        display: flex;
+        align-items: center;
+        text-align: left;
+        max-width: 1000px;
+        gap: 40px;
+    }
+
+    #inicio>div:first-child {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .foto-perfil {
+        flex: 0 0 250px;
+    }
+
+    .foto-perfil img {
+        width: 100%;
+        aspect-ratio: 1;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    #inicio h1 {
+        margin-bottom: 12px;
+        text-align: left;
+    }
+
+    #inicio h2 {
+        color: var(--cor-destaque);
+        margin-bottom: 20px;
+    }
+
+    #inicio p {
+        color: var(--cor-texto-secundario);
+        line-height: 1.7;
+        margin-bottom: 30px;
+    }
+
+    #inicio a {
         display: inline-block;
         padding: 10px 16px;
         background-color: var(--cor-primaria);
+        color: var(--cor-texto);
+        text-decoration: none;
         margin-right: 10px;
+        border-radius: 6px;
+        transition: background-color 0.3s ease;
     }
 
-    section a:hover {
+    #inicio a:hover {
         background-color: var(--cor-destaque);
     }
 
@@ -48,7 +93,7 @@ body {
 
     }
 
-    ul {
+    header ul {
         display: flex;
         gap: 30px;
         list-style: none;
@@ -71,6 +116,8 @@ body {
         text-align: left;
         background-color: transparent;
         box-shadow: none;
+        max-width: 1000px;
+        width: 100%;
     }
 
     article {
@@ -83,6 +130,52 @@ body {
         border: 1px solid rgba(148, 163, 184, 0.12);
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     }
+
+    .linha-do-tempo {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+        padding-left: 35px;
+    }
+
+    .linha-do-tempo::before {
+        content: "";
+        position: absolute;
+        left: 8px;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background-color: var(--cor-primaria);
+    }
+
+    .linha-do-tempo article {
+        position: relative;
+    }
+
+    .linha-do-tempo article::before {
+        content: "";
+        position: absolute;
+        left: -34px;
+        top: 28px;
+        width: 14px;
+        height: 14px;
+        background-color: var(--cor-destaque);
+        border: 3px solid var(--cor-fundo);
+        border-radius: 50%;
+    }
+
+    .periodo {
+        color: var(--cor-destaque);
+        font-size: 0.85em;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+}
+
+* {
+    box-sizing: border-box;
 }
 
 
